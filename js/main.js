@@ -103,3 +103,18 @@ var swiper1 = new Swiper('.reviews-container', {
     }
   }
 });
+var sliderThumbs = new Swiper(".card-thumbs", {
+  loop: true,
+  slidesPerView: 4,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true
+});
+var cardSlider = new Swiper(".card-slider", {
+  loop: true,
+  navigation: {//nextEl: ".swiper-button-next",
+    //prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: sliderThumbs
+  }
+});
