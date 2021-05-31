@@ -60,19 +60,40 @@ try {
 }
 
 ;
-var swiper = new Swiper('.gallery-container', {
+var colors = document.querySelectorAll('.card-color__item');
+var curColor = document.querySelector('.current-color');
+
+var _iterator2 = _createForOfIteratorHelper(colors),
+    _step2;
+
+try {
+  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+    var color = _step2.value;
+    color.addEventListener('click', function (e) {
+      var curColorName = e.target.attributes.title.value;
+      curColor.innerText = curColorName;
+    });
+  }
+} catch (err) {
+  _iterator2.e(err);
+} finally {
+  _iterator2.f();
+}
+
+;
+var swiper0 = new Swiper('.utp-container', {
   // Optional parameters
   direction: 'horizontal',
-  effect: "coverflow",
-  grabCursor: true,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true
-  },
+  spaceBetween: 20,
   loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 3000
+  },
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev"
+  },
   breakpoints: {
     767: {
       slidesPerView: 1
@@ -81,11 +102,34 @@ var swiper = new Swiper('.gallery-container', {
       slidesPerView: 3
     },
     1260: {
-      slidesPerView: 6
+      slidesPerView: 4
+    }
+  }
+});
+var swiper = new Swiper('.gallery-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  spaceBetween: 20,
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev"
+  },
+  breakpoints: {
+    767: {
+      slidesPerView: 1
+    },
+    1259: {
+      slidesPerView: 3
+    },
+    1260: {
+      slidesPerView: 3
     }
   }
 });
 var swiper1 = new Swiper('.reviews-container', {
+  grabCursor: true,
   loop: true,
   navigation: {
     nextEl: ".slider-button-next",
@@ -105,14 +149,26 @@ var swiper1 = new Swiper('.reviews-container', {
 });
 var sliderThumbs = new Swiper(".card-thumbs", {
   loop: true,
-  slidesPerView: 4,
   watchSlidesVisibility: true,
-  watchSlidesProgress: true
+  watchSlidesProgress: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    1259: {
+      slidesPerView: 3
+    },
+    1260: {
+      slidesPerView: 4
+    }
+  }
 });
 var cardSlider = new Swiper(".card-slider", {
   loop: true,
-  navigation: {//nextEl: ".swiper-button-next",
-    //prevEl: ".swiper-button-prev",
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev"
   },
   thumbs: {
     swiper: sliderThumbs
