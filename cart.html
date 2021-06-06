@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Автонакидки</title>
+  </head>
+  <body> </body>
+</html>
+<header class="header">
+  <div class="container">
+    <div class="header__container"><a class="logo" href="/"> <img src="../img/logo.svg" alt=""><span>АВТОНАКИДКИ</span></a>
+      <nav class="menu-body"> 
+        <ul class="navigation"> 
+          <li><a class="navigation__item smoothLink" href="#catalog">КАТАЛОГ</a></li>
+          <li><a class="navigation__item smoothLink strong" href="#">КАЛЬКУЛЯТОР НАКИДОК</a></li>
+          <li><a class="navigation__item smoothLink" href="#">ДОСТАВКА И ОПЛАТА</a></li>
+          <li><a class="navigation__item smoothLink" href="#callback">КОНТАКТЫ             </a></li>
+        </ul>
+      </nav>
+      <!--.header-social-->
+      <!--    a.header-social__item(href="#", target="_blank")-->
+      <!--        img(src="../img/icon-whatsapp.svg", alt="")-->
+      <!--    a.header-social__item(href="#", target="_blank")-->
+      <!--        img(src="../img/icon-telegram.svg", alt="")-->
+      <!--    a.header-social__item(href="#", target="_blank")-->
+      <!--        img(src="../img/icon-instagram.svg", alt="")--><a class="header-cart" href="#" title="Корзина">
+        <div class="header-cart__count">1 </div>
+        <div class="header-cart__img"><img src="../img/icon-cart2.svg" alt=""></div></a>
+      <div class="header-callback"><a class="header-callback__phone" href="tel:+74959994455">+7 (495) 785-44-55 </a><a class="header-callback__link popup-link" href="#popup-callback">Обратный звонок </a></div>
+      <div class="menu-icon"> <span></span></div>
+    </div>
+  </div>
+</header>
+<section class="cart" id="cart">
+  <div class="container">
+    <div class="card-back" onclick="alert('НАЗАД')"> 
+      <div class="card-back__img"><img src="../img/icon-back-arrow.svg" alt=""></div>
+      <div class="card-back__text">вернуться</div>
+    </div>
+    <div class="title">КОРЗИНА</div>
+    <div class="subtitle">Товары в заказе</div>
+  </div>
+  <div class="container">
+    <div class="cart__wrap">
+      <div class="cart__item">
+        <div class="cart__item__col-1">Название товара:</div>
+        <div class="cart__item__col-2">Количество:</div>
+        <div class="cart__item__col-3">Цена:</div>
+      </div>
+      <div class="cart__item cart__item--product" data-id="22">
+        <div class="cart__item__col-1"> <a class="cart__title" href="#">Автонакидки широкие </a>
+          <div class="cart__descr">Цвет: Изумрудный </div>
+        </div>
+        <div class="cart__item__col-2">
+          <div class="card__count card__count--center">
+            <div class="card__count__minus" onclick="decrementValue('22');">-</div>
+            <input class="card__count__input" id="card__count__input" value="1" maxlength="3" min="1" data-id="22">
+            <div class="card__count__plus" onclick="incrementValue('22');">+</div>
+          </div>
+        </div>
+        <div class="cart__item__col-3">2 450 <strong>₽</strong></div>
+        <div class="cart__item__col-4"> 
+          <div class="cart__remove" onclick="removeProduct('22');"></div>
+        </div>
+      </div>
+      <div class="cart__item cart__item--product" data-id="33">
+        <div class="cart__item__col-1"> <a class="cart__title" href="#">Автонакидки на задние сидения  </a>
+          <div class="cart__descr">Цвет: Изумрудный </div>
+        </div>
+        <div class="cart__item__col-2">
+          <div class="card__count card__count--center">
+            <div class="card__count__minus" onclick="decrementValue('33');">-</div>
+            <input class="card__count__input" id="card__count__input" value="1" maxlength="3" min="1" data-id="33">
+            <div class="card__count__plus" onclick="incrementValue('33');">+</div>
+          </div>
+        </div>
+        <div class="cart__item__col-3">2 450 <strong>₽</strong></div>
+        <div class="cart__item__col-4"> 
+          <div class="cart__remove" onclick="removeProduct('33');"></div>
+        </div>
+      </div>
+      <div class="cart__item cart__item--sum">
+        <div class="cart__item__col-1">Итого:</div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">4950 <strong>₽</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="checkout" id="checkout">
+  <div class="container"> 
+    <div class="relatedProducts__title">
+      <div class="title title-left">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+      <div class="relatedProducts__border"></div>
+    </div>
+    <div class="checkout__wrap"> 
+      <div class="checkout__col">
+        <div class="checkout__title">Тип оплаты</div>
+        <div class="checkout-radio">
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="payment" id="cash" value="Оплата при получении">
+            <label for="cash">Оплата при получении  </label>
+          </div>
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="payment" id="online" value="Оплата онлайн" checked>
+            <label for="online">Оплата онлайн</label>
+          </div>
+        </div>
+        <div class="checkout__title">Данные покупателя</div>
+        <div class="checkout-input">
+          <div class="checkout-input__item"> 
+            <label>Ваше имя: *</label>
+            <input type="text" name="checkout_name" placeholder="Иванов Иван Иванович">
+          </div>
+          <div class="checkout-input__item"> 
+            <label>Телефон: *</label>
+            <input type="number" name="checkout_phone" placeholder="+7 (999) 444-55-55">
+          </div>
+          <div class="checkout-input__item"> 
+            <label>E-mail: *</label>
+            <input type="email" name="checkout_email" placeholder="example@mail.ru">
+          </div>
+        </div>
+      </div>
+      <div class="checkout__col">
+        <div class="checkout__title">Тип доставки</div>
+        <div class="checkout-radio checkout-radio--flex"> 
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="delivery" id="courier" value="Курьером по Москве и МО" checked>
+            <label for="courier">Курьером по Москве и МО (400 руб. *) </label>
+          </div>
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="delivery" id="pochtaRussia" value="Почта России">
+            <label for="pochtaRussia">Почта России</label>
+          </div>
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="delivery" id="sdek" value="Транспортной компанией СДЭК">
+            <label for="sdek">Транспортной компанией СДЭК (350  руб. *)</label>
+          </div>
+        </div>
+        <div class="checkout__title">Данные по доставке</div>
+        <div class="checkout-input">
+          <div class="checkout-input__item checkout-input__item--long">
+            <label>Город: *</label>
+            <input type="text" name="checkout_town" placeholder="Москва">
+          </div>
+          <div class="checkout-input__item checkout-input__item--long"> 
+            <label>Улица: *</label>
+            <input type="text" name="checkout_street" placeholder="улица Подольских курсантов">
+          </div>
+          <div class="checkout-input--flex">
+            <div class="checkout-input__item"> 
+              <label>Дом/корпус: *</label>
+              <input type="text" name="checkout_house" placeholder="14к1">
+            </div>
+            <div class="checkout-input__item"> 
+              <label>Квартира: *</label>
+              <input type="text" name="checkout_flat" placeholder="74">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart__wrap">
+      <div class="cart__item checkout__row">
+        <div class="cart__item__col-1">Товары</div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">4 900 ₽</div>
+      </div>
+      <div class="cart__item checkout__row">
+        <div class="cart__item__col-1"> 
+          <div class="cart__title">Примерная стоимость доставки </div>
+          <div class="cart__descr">* точная стоимость доставки расчитывается при подтверждении заказа</div>
+        </div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">350 ₽</div>
+      </div>
+      <div class="cart__item checkout__row">
+        <div class="cart__item__col-1">Итого к оплате</div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">5 250 ₽</div>
+      </div>
+    </div>
+    <div class="checkout__button">
+      <div class="card__button button button--yellow">Оформить заказ</div>
+    </div>
+  </div>
+</section>
+<div class="reviews-bottom-bg"></div>
+<section class="callback" id="callback">
+  <div class="container"> 
+    <div class="callback__wrapper">
+      <div class="callback__info"> 
+        <div class="title callback__title">ОБРАТНАЯ СВЯЗЬ</div>
+        <div class="callback__descr">
+          Если у Вас остались вопросы, либо хотите что-то спросить, заполните форму и мы свяжемся с Вами в ближайшее время.
+          Также Вы можете сами позвонить или написать в социальные сети и мессенждеры.
+        </div>
+        <h3 class="callback__h3">Телефон</h3>
+        <div class="callback__text">+7 (495) 785-44-55</div>
+        <h3 class="callback__h3">Часы работы</h3>
+        <div class="callback__text">каждый день c 9-00 до 20-00</div>
+        <h3 class="callback__h3">Пишите нам</h3>
+        <div class="callback__social"><a class="callback__social__item" href="#" target="_blank"><img src="../img/icon-whatsapp.svg" alt=""></a><a class="callback__social__item" href="#" target="_blank"><img src="../img/icon-telegram.svg" alt=""></a><a class="callback__social__item" href="#" target="_blank"><img src="../img/icon-instagram.svg" alt=""></a></div>
+      </div>
+      <div class="callback__form"> 
+        <div class="callback__form__title">СВЯЗАТЬСЯ С НАМИ</div>
+        <form class="form" action=""> 
+          <input class="callback__input" type="text" name="callback-name" placeholder="Имя">
+          <input class="callback__input" type="text" name="callback-email" placeholder="Телефон или E-mail">
+          <textarea class="callback__input" name="callback-message" placeholder="Сообщение" rows="6"></textarea>
+          <div class="callback__fz">
+            <input class="callback__checkbox" type="checkbox" name="fz" checked>
+            <div class="callback__fz__text">Согласен с <a href="#">правилами сбора</a> персональной информации в соответсвтии с ФЗ- 154</div>
+          </div>
+          <button class="button callback__button">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrap"> 
+      <div class="footer__left">
+        <div class="footer__politics"> <a href="#">Политика конфиденциальности </a><a href="#">Пользовательское соглашение</a></div>
+        <div class="footer__menu"> <a href="#">КАТАЛОГ</a><a href="#">КАЛЬКУЛЯТОР НАКИДОК</a><a href="#">ДОСТАВКА И ОПЛАТА</a><a href="#">КОНТАКТЫ</a></div>
+        <div class="footer__copyright">© 2021 </div>
+      </div>
+      <div class="footer__right"><a class="footer__phone" href="tel:777777777">+7 (495) 785-44-55</a><a class="footer__logo" href=""> <img src="../img/logo.svg" alt=""><span>АВТОНАКИДКИ</span></a></div>
+    </div>
+  </div>
+</footer>
+<div class="popup popup-callback" id="popup-callback">
+  <div class="popup__body">
+    <div class="popup__content"> <a class="popup__close close-popup" href="#"></a>
+      <div class="callbackPopup"> 
+        <div class="callbackPopup__form__title">ОБРАТНЫЙ ЗВОНОК</div>
+        <form class="form" action=""> 
+          <input class="callbackPopup__input" type="text" name="callback-name" placeholder="Имя">
+          <input class="callbackPopup__input" type="text" name="callback-phone" placeholder="Телефон">
+          <div class="callbackPopup__fz">
+            <input class="callbackPopup__checkbox" type="checkbox" name="fz" checked>
+            <div class="callbackPopup__fz__text">Согласен с <a href="#">правилами сбора</a> персональной информации в соответсвтии с ФЗ- 154</div>
+          </div>
+          <button class="button callback__button">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js">   </script>
+<script src="js/jquery.min.js"> </script>
+<script src="js/jquery.magnify.min.js"> </script>
+<script src="js/main.min.js"> </script>

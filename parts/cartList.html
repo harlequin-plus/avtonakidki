@@ -1,0 +1,57 @@
+
+<section class="cart" id="cart">
+  <div class="container">
+    <div class="card-back" onclick="alert('НАЗАД')"> 
+      <div class="card-back__img"><img src="../img/icon-back-arrow.svg" alt=""/></div>
+      <div class="card-back__text">вернуться</div>
+    </div>
+    <div class="title">КОРЗИНА</div>
+    <div class="subtitle">Товары в заказе</div>
+  </div>
+  <div class="container">
+    <div class="cart__wrap">
+      <div class="cart__item">
+        <div class="cart__item__col-1">Название товара:</div>
+        <div class="cart__item__col-2">Количество:</div>
+        <div class="cart__item__col-3">Цена:</div>
+      </div>
+      <div class="cart__item cart__item--product" data-id="22">
+        <div class="cart__item__col-1"> <a class="cart__title" href="#">Автонакидки широкие </a>
+          <div class="cart__descr">Цвет: Изумрудный </div>
+        </div>
+        <div class="cart__item__col-2">
+          <div class="card__count card__count--center">
+            <div class="card__count__minus" onclick="decrementValue('22');">-</div>
+            <input class="card__count__input" id="card__count__input" value="1" maxlength="3" min="1" data-id="22"/>
+            <div class="card__count__plus" onclick="incrementValue('22');">+</div>
+          </div>
+        </div>
+        <div class="cart__item__col-3">2 450 <strong>₽</strong></div>
+        <div class="cart__item__col-4"> 
+          <div class="cart__remove" onclick="removeProduct('22');"></div>
+        </div>
+      </div>
+      <div class="cart__item cart__item--product" data-id="33">
+        <div class="cart__item__col-1"> <a class="cart__title" href="#">Автонакидки на задние сидения  </a>
+          <div class="cart__descr">Цвет: Изумрудный </div>
+        </div>
+        <div class="cart__item__col-2">
+          <div class="card__count card__count--center">
+            <div class="card__count__minus" onclick="decrementValue('33');">-</div>
+            <input class="card__count__input" id="card__count__input" value="1" maxlength="3" min="1" data-id="33"/>
+            <div class="card__count__plus" onclick="incrementValue('33');">+</div>
+          </div>
+        </div>
+        <div class="cart__item__col-3">2 450 <strong>₽</strong></div>
+        <div class="cart__item__col-4"> 
+          <div class="cart__remove" onclick="removeProduct('33');"></div>
+        </div>
+      </div>
+      <div class="cart__item cart__item--sum">
+        <div class="cart__item__col-1">Итого:</div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">4950 <strong>₽</strong></div>
+      </div>
+    </div>
+  </div>
+</section>

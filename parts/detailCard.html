@@ -18,9 +18,6 @@
               <div class="box"></div><span>Передняя пара</span>
             </div>
             <div class="card-type__item"> 
-              <div class="box"></div><span>Передняя пара +&nbsp;задний диван</span>
-            </div>
-            <div class="card-type__item"> 
               <div class="box"></div><span>Задний диван</span>
             </div>
           </div>
@@ -55,8 +52,13 @@
         <div class="card__params-block">
           <div class="card__price">Цена: <span>2 450 <strong>₽</strong></span></div>
         </div>
-        <div class="card__params-block">
+        <div class="card__params-block card__params-block-flex">
           <div class="card__button button button--yellow">Купить</div>
+          <div class="card__count"><span>Кол-во:</span>
+            <div class="card__count__minus" onclick="decrementValue('99');">-</div>
+            <input class="card__count__input" id="card__count__input" value="1" maxlength="3" min="1" data-id="99"/>
+            <div class="card__count__plus" onclick="incrementValue('99');">+</div>
+          </div>
         </div>
         <div class="card__params-block">
           <div class="card__title">Описание товара:</div>
@@ -66,10 +68,10 @@
       <div class="card__img">
         <div class="card-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide card-slider__item"><img src="../img/detail/item-1.png"/></div>
-            <div class="swiper-slide card-slider__item"><img src="../img/detail/item-1.png"/></div>
-            <div class="swiper-slide card-slider__item"><img src="../img/detail/item-1.png"/></div>
-            <div class="swiper-slide card-slider__item"><img src="../img/detail/item-1.png"/></div>
+            <div class="swiper-slide card-slider__item"><img class="zoom" src="../img/detail/item-1.png" data-magnify-src="../img/detail/item-1_large.png"/></div>
+            <div class="swiper-slide card-slider__item"><img class="zoom" src="../img/detail/item-1.png" data-magnify-src="../img/detail/item-1_large.png"/></div>
+            <div class="swiper-slide card-slider__item"><img class="zoom" src="../img/detail/item-1.png" data-magnify-src="../img/detail/item-1_large.png"/></div>
+            <div class="swiper-slide card-slider__item"><img class="zoom" src="../img/detail/item-1.png" data-magnify-src="../img/detail/item-1_large.png"/></div>
           </div>
         </div>
         <div class="card-thumbs" thumbsSlider="">

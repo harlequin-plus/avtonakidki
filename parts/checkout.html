@@ -1,0 +1,101 @@
+
+<section class="checkout" id="checkout">
+  <div class="container"> 
+    <div class="relatedProducts__title">
+      <div class="title title-left">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+      <div class="relatedProducts__border"></div>
+    </div>
+    <div class="checkout__wrap"> 
+      <div class="checkout__col">
+        <div class="checkout__title">Тип оплаты</div>
+        <div class="checkout-radio">
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="payment" id="cash" value="Оплата при получении"/>
+            <label for="cash">Оплата при получении  </label>
+          </div>
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="payment" id="online" value="Оплата онлайн" checked="checked"/>
+            <label for="online">Оплата онлайн</label>
+          </div>
+        </div>
+        <div class="checkout__title">Данные покупателя</div>
+        <div class="checkout-input">
+          <div class="checkout-input__item"> 
+            <label>Ваше имя: *</label>
+            <input type="text" name="checkout_name" placeholder="Иванов Иван Иванович"/>
+          </div>
+          <div class="checkout-input__item"> 
+            <label>Телефон: *</label>
+            <input type="number" name="checkout_phone" placeholder="+7 (999) 444-55-55"/>
+          </div>
+          <div class="checkout-input__item"> 
+            <label>E-mail: *</label>
+            <input type="email" name="checkout_email" placeholder="example@mail.ru"/>
+          </div>
+        </div>
+      </div>
+      <div class="checkout__col">
+        <div class="checkout__title">Тип доставки</div>
+        <div class="checkout-radio checkout-radio--flex"> 
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="delivery" id="courier" value="Курьером по Москве и МО" checked="checked"/>
+            <label for="courier">Курьером по Москве и МО (400 руб. *) </label>
+          </div>
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="delivery" id="pochtaRussia" value="Почта России"/>
+            <label for="pochtaRussia">Почта России</label>
+          </div>
+          <div class="checkout-radio__item"> 
+            <input type="radio" name="delivery" id="sdek" value="Транспортной компанией СДЭК"/>
+            <label for="sdek">Транспортной компанией СДЭК (350  руб. *)</label>
+          </div>
+        </div>
+        <div class="checkout__title">Данные по доставке</div>
+        <div class="checkout-input">
+          <div class="checkout-input__item checkout-input__item--long">
+            <label>Город: *</label>
+            <input type="text" name="checkout_town" placeholder="Москва"/>
+          </div>
+          <div class="checkout-input__item checkout-input__item--long"> 
+            <label>Улица: *</label>
+            <input type="text" name="checkout_street" placeholder="улица Подольских курсантов"/>
+          </div>
+          <div class="checkout-input--flex">
+            <div class="checkout-input__item"> 
+              <label>Дом/корпус: *</label>
+              <input type="text" name="checkout_house" placeholder="14к1"/>
+            </div>
+            <div class="checkout-input__item"> 
+              <label>Квартира: *</label>
+              <input type="text" name="checkout_flat" placeholder="74"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart__wrap">
+      <div class="cart__item checkout__row">
+        <div class="cart__item__col-1">Товары</div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">4 900 ₽</div>
+      </div>
+      <div class="cart__item checkout__row">
+        <div class="cart__item__col-1"> 
+          <div class="cart__title">Примерная стоимость доставки </div>
+          <div class="cart__descr">* точная стоимость доставки расчитывается при подтверждении заказа</div>
+        </div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">350 ₽</div>
+      </div>
+      <div class="cart__item checkout__row">
+        <div class="cart__item__col-1">Итого к оплате</div>
+        <div class="cart__item__col-2"> </div>
+        <div class="cart__item__col-3">5 250 ₽</div>
+      </div>
+    </div>
+    <div class="checkout__button">
+      <div class="card__button button button--yellow">Оформить заказ</div>
+    </div>
+  </div>
+</section>
+<div class="reviews-bottom-bg"></div>

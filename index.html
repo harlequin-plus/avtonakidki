@@ -17,10 +17,10 @@
     <div class="header__container"><a class="logo" href="/"> <img src="../img/logo.svg" alt=""><span>АВТОНАКИДКИ</span></a>
       <nav class="menu-body"> 
         <ul class="navigation"> 
-          <li><a class="navigation__item" href="#catalog">КАТАЛОГ</a></li>
-          <li><a class="navigation__item strong" href="#">КАЛЬКУЛЯТОР НАКИДОК</a></li>
-          <li><a class="navigation__item" href="#">ДОСТАВКА И ОПЛАТА</a></li>
-          <li><a class="navigation__item" href="#">КОНТАКТЫ             </a></li>
+          <li><a class="navigation__item smoothLink" href="#catalog">КАТАЛОГ</a></li>
+          <li><a class="navigation__item smoothLink strong" href="#">КАЛЬКУЛЯТОР НАКИДОК</a></li>
+          <li><a class="navigation__item smoothLink" href="#">ДОСТАВКА И ОПЛАТА</a></li>
+          <li><a class="navigation__item smoothLink" href="#callback">КОНТАКТЫ             </a></li>
         </ul>
       </nav>
       <!--.header-social-->
@@ -32,7 +32,7 @@
       <!--        img(src="../img/icon-instagram.svg", alt="")--><a class="header-cart" href="#" title="Корзина">
         <div class="header-cart__count">1 </div>
         <div class="header-cart__img"><img src="../img/icon-cart2.svg" alt=""></div></a>
-      <div class="header-callback"><a class="header-callback__phone" href="tel:+74959994455">+7 (495) 785-44-55 </a><a class="header-callback__link" href="#">Обратный звонок </a></div>
+      <div class="header-callback"><a class="header-callback__phone" href="tel:+74959994455">+7 (495) 785-44-55 </a><a class="header-callback__link popup-link" href="#popup-callback">Обратный звонок </a></div>
       <div class="menu-icon"> <span></span></div>
     </div>
   </div>
@@ -41,7 +41,7 @@
   <div class="container intro-container">
     <h1 class="intro__title">УНИВЕРСАЛЬНЫЕ АВТОНАКИДКИ</h1>
     <h2 class="intro__subtitle">премиум-класса на любое авто</h2>
-    <div class="intro-buttons"> <a class="button button--yellow" href="#">ПОДОБРАТЬ НАКИДКУ</a><a class="button button--white" href="#">СВЯЗАТЬСЯ</a></div><a class="intro__down" href="#utp"><img src="../img/intro/down.svg" alt=""></a>
+    <div class="intro-buttons"> <a class="button button--yellow" href="#">ПОДОБРАТЬ НАКИДКУ</a><a class="button button--white" href="#">СВЯЗАТЬСЯ</a></div><a class="intro__down smoothLink" href="#utp"><img src="../img/intro/down.svg" alt=""></a>
   </div>
 </section>
 <section class="utp" id="utp"> 
@@ -52,7 +52,12 @@
         <div class="swiper-slide utp__item">
           <div class="utp__img"><img src="../img/utp/item-1.svg" alt=""></div>
           <div class="utp__name">Защита салона</div>
-          <div class="utp__text">Ваша обшивка кресел надежна защищена от царапин и износа. Накидки не окрашиваю сиденья</div>
+          <div class="utp__text">Ваша обшивка кресел надежна защищена от царапин и износа</div>
+        </div>
+        <div class="swiper-slide utp__item">
+          <div class="utp__img"><img src="../img/utp/item-2.svg" alt=""></div>
+          <div class="utp__name">ЗАЩИТА ОТ ОКРАЩИВАНИЯ</div>
+          <div class="utp__text">Накидки не окрашиваю сиденья. Актуально для владельцев светлых салонов                    </div>
         </div>
         <div class="swiper-slide utp__item">
           <div class="utp__img"><img src="../img/utp/item-3.svg" alt=""></div>
@@ -78,6 +83,11 @@
           <div class="utp__img"><img src="../img/utp/item-7.svg" alt=""></div>
           <div class="utp__name">В ЛЮБУЮ ПОГОДУ</div>
           <div class="utp__text">Тепло зимой, прохладно летом</div>
+        </div>
+        <div class="swiper-slide utp__item">
+          <div class="utp__img"><img src="../img/utp/item-8.svg" alt=""></div>
+          <div class="utp__name">ВЫСОКОЕ КАЧЕСТВО МАТЕРИАЛОВ</div>
+          <div class="utp__text">Крученая армированная нить придает швам повышенную износостойкость</div>
         </div>
       </div>
       <div class="slider-button slider-button-next slider-button--utp"></div>
@@ -280,5 +290,25 @@
     </div>
   </div>
 </footer>
+<div class="popup popup-callback" id="popup-callback">
+  <div class="popup__body">
+    <div class="popup__content"> <a class="popup__close close-popup" href="#"></a>
+      <div class="callbackPopup"> 
+        <div class="callbackPopup__form__title">ОБРАТНЫЙ ЗВОНОК</div>
+        <form class="form" action=""> 
+          <input class="callbackPopup__input" type="text" name="callback-name" placeholder="Имя">
+          <input class="callbackPopup__input" type="text" name="callback-phone" placeholder="Телефон">
+          <div class="callbackPopup__fz">
+            <input class="callbackPopup__checkbox" type="checkbox" name="fz" checked>
+            <div class="callbackPopup__fz__text">Согласен с <a href="#">правилами сбора</a> персональной информации в соответсвтии с ФЗ- 154</div>
+          </div>
+          <button class="button callback__button">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js">   </script>
+<script src="js/jquery.min.js"> </script>
+<script src="js/jquery.magnify.min.js"> </script>
 <script src="js/main.min.js"> </script>
